@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste</title>
+    <!-- Inserindo Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- Inserindo CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Javascript Inicial -->
+    <script>
+        var spawn_time = parseFloat(window.location.search.replace("?", ""))
+        
+    </script>
+</head>
+<body onload="get_body_size()" onresize="get_body_size()">
+    <div id="player_hud" class="pt-1">
+        <div class="container">
+            <div>
+                <img src="img/coracao_cheio.png" id="heart_1" alt="">
+                <img src="img/coracao_cheio.png" id="heart_2" alt="">
+                <img src="img/coracao_cheio.png" id="heart_3" alt="">
+            </div>
+            <h5>Tempo restante: <span id="clock"></span></h5>
+        </div>
+    </div>
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+    <script>
+        setInterval(appear_mosquito, spawn_time)
+        setInterval(clock, 1000)
+    </script>
+</body>
+</html>
